@@ -16,6 +16,8 @@
     gap: 1rem;
     justify-content: center;
     flex-wrap: wrap;
+    position: relative; /* Para conter o botão absoluto */
+    min-height: 150px; /* Altura mínima para movimento vertical */
 }
 
 .button {
@@ -35,6 +37,10 @@
 .button--no {
     background-color: #f44336;
     color: white;
+    position: absolute;
+    left: 0;
+    top: 0;
+    will-change: transform; /* Otimização de performance */
 }
 
 .button-link {
