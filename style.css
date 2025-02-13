@@ -1,14 +1,37 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    background-color: #fad0c4; /* Fallback */
+    min-height: 100vh;
+    font-family: 'Arial', sans-serif;
+}
+
 .container {
-    max-width: 600px;
-    margin: 2rem auto;
+    max-width: 800px;
+    margin: 0 auto;
     padding: 2rem;
-    text-align: center;
+}
+
+.content {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 3rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 
 .title {
+    font-size: 3.5rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
     color: #e91e63;
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
+    font-family: 'Pacifico', cursive;
 }
 
 .buttons-container {
@@ -16,8 +39,9 @@
     gap: 1rem;
     justify-content: center;
     flex-wrap: wrap;
-    position: relative; /* Para conter o botão absoluto */
-    min-height: 150px; /* Altura mínima para movimento vertical */
+    position: relative;
+    min-height: 150px;
+    margin: 2rem 0;
 }
 
 .button {
@@ -26,7 +50,8 @@
     border-radius: 50px;
     font-size: 1.1rem;
     cursor: pointer;
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
+    position: relative;
 }
 
 .button--yes {
@@ -38,13 +63,79 @@
     background-color: #f44336;
     color: white;
     position: absolute;
-    left: 0;
-    top: 0;
-    will-change: transform; /* Otimização de performance */
+    will-change: transform;
 }
 
-.button-link {
-    text-decoration: none;
+.text-gradient {
+    background: linear-gradient(45deg, #ff6b6b, #ff8e53);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 1rem 0;
 }
 
-/* Adicione animações e efeitos hover conforme necessário */
+.btn-confirm {
+    background: #e91e63;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    display: block;
+    margin: 2rem auto 0;
+}
+
+/* Animações */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+.hearts::before,
+.sparkles::after {
+    content: '💖';
+    position: absolute;
+    animation: float 3s infinite;
+    font-size: 1.5rem;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 2rem;
+    color: #666;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    .content {
+        padding: 1.5rem;
+    }
+    
+    .title {
+        font-size: 2.5rem;
+    }
+    
+    .button {
+        font-size: 1rem;
+        padding: 0.75rem 1.5rem;
+    }
+}
