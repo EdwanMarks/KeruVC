@@ -1,21 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/quer-namorar-cmg/style.css">
-    <title>Document</title>
+    <meta name="description" content="Declaração de amor eterno">
+    <link rel="stylesheet" href="style.css">
+    <title>Amor Eterno</title>
+    <style>
+        /* Estilos iniciais para evitar FOUC */
+        body {
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+    </style>
 </head>
 <body>
-    <div id="container">
-    
-        <h1>Te amo</h1>
+    <div class="container">
+        <main class="content">
+            <div class="hearts"></div>
+            
+            <h1 class="title pulse">Te amo 💖</h1>
+            
+            <div class="message">
+                <p class="text-gradient">Saiba que não tem volta hehehe</p>
+                <div class="sparkles"></div>
+            </div>
 
-        <p>Saiba que não tem volta hehehe</p>
+            <div class="actions">
+                <button class="btn-confirm">Eu também te amo! ❤️</button>
+            </div>
+        </main>
 
-        
+        <footer class="footer">
+            <p>Feito com ♡ para toda a eternidade</p>
+        </footer>
     </div>
 
+    <script>
+        // Script para carregamento suave
+        window.addEventListener('DOMContentLoaded', () => {
+            document.body.style.opacity = '1';
+        });
+    </script>
 </body>
 </html>
