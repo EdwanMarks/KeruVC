@@ -1,26 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/quer-namorar-cmg/style.css">
-    <title>Document</title>
+    <meta name="description" content="Página romântica para pedir em namoro">
+    <link rel="stylesheet" href="style.css">
+    <title>Quer Namorar Comigo?</title>
 </head>
 <body>
-    <main>
-        <div id="container ">
-            <div id="bot">
-                <a href="/quer-namorar-cmg/obrigado.html">
-                    <button id="sim">Sim</button>
-                </a>
-                <button class="mover">Não</button>
-            </div>
+    <main class="container">
+        <h1 class="title">Quer Namorar Comigo? 💖</h1>
+        
+        <div class="buttons-container">
+            <a href="obrigado.html" class="button-link">
+                <button class="button button--yes">Sim, com certeza!</button>
+            </a>
+            
+            <button class="button button--no" id="movingButton">Não posso agora</button>
         </div>
-        <h1>Quer Namorar Comigo?</h1>
 
+        <div class="hearts-animation"></div>
     </main>
-   
-    <script src="/quer-namorar-cmg/script.js"></script>
+
+    <script src="script.js"></script>
 </body>
 </html>
